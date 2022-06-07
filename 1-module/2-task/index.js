@@ -8,17 +8,29 @@ function print(text) {
 /**
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
+ * 4 символа, не пустой, без пробелов
  */
 function isValid(name) {
-  // ваш код...
+  const givenName = name;
+  if (givenName === null || givenName === '') {
+    return false;
+  } else {
+    let areSpacesPresent = givenName.includes(' ');
+    if (areSpacesPresent === false && name.length >= 4) {
+      console.log(name);
+      return true;
+    } else {
+      return false;
+    }
+  }     
 }
 
 function sayHello() {
-  let userName = prompt('Введите ваше имя');
+  let userName = prompt("Введите ваше имя");
 
   if (isValid(userName)) {
     print(`Welcome back, ${userName}!`);
   } else {
-    print('Некорректное имя');
+    print("Некорректное имя");
   }
 }
