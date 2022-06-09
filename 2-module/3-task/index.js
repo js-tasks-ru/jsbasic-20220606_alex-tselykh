@@ -4,11 +4,11 @@ let calculator = {
     this.b = b;
   },
 
-  sum: function() {
+  sum() {
     return (this.a) + this.b;
   },
 
-  mul: function() {
+  mul() {
     return this.a * this.b;
   }
 };
